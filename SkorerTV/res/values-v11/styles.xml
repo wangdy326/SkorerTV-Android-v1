@@ -1,0 +1,26 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="MilliyetTVBaseTheme" 
+        parent="@style/Theme.AppCompat">
+        <!-- API 11 theme customizations can go here. -->
+        
+        <item name="android:actionBarStyle">@style/MilliyetTVActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MilliyetTVActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/red</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/red</item>
+        
+        <!-- Support library compatibility -->
+        <item name="titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+    
+</resources>

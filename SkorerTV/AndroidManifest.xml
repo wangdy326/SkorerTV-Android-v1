@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skorer.tv"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.skorer.tv.SkorerTVApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/launcher"
+        android:logo="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/MilliyetTVTheme" >
+        <activity
+            android:name="com.skorer.tv.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="milliyettv" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.skorer.tv.VideoClipActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true" > <!-- ???: |screenLayout|uiMode" -->
+        </activity>
+        <activity
+            android:name="com.mobilike.preroll.PreRollActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+        </activity>
+        
+        <!-- open external urls -->
+        <activity android:name="de.madvertise.android.sdk.MadvertiseActivity" />
+        
+        <!-- Setup your site token. For tests, use 'TestTokn'-->
+        <meta-data android:value="rXs6iV2k" android:name="madvertise_site_token" />
+        
+        <!-- Mraid TestSuite -->
+        <activity android:name="android.app.Activity" />
+        <uses-library android:name="android.test.runner" />
+    </application>
+    
+    
+    <instrumentation android:targetPackage="de.madvertise.test" android:name="android.test.InstrumentationTestRunner" />
+
+</manifest>

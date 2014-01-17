@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Skorer TV</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Ara</string>
+    <string name="action_share">Paylaş</string>
+    <string name="action_add_favourites">Favorilerime ekle</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="empty"></string>
+    
+	<string name="drawer_open">Navigasyon menüsünü aç</string>
+    <string name="drawer_close">Navigasyon menüsünü kapa</string>
+    
+    <string name="like">Sevdim</string>
+    <string name="dislike">Sevmedim</string>
+    
+    <string name="retry">Tekrar dene</string>
+    
+    <string name="publish_date_title">Yayınlanma tarihi</string>
+    <string name="impression_title">İzlenme sayısı</string>
+    
+    <string name="seperator">:</string>
+	
+</resources>

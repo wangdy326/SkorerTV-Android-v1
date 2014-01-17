@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mad="http://schemas.android.com/apk/res/com.skorer.tv"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    tools:context=".VideoListFragment" >
+
+    <ListView
+        android:id="@+id/videolist_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/madvertise_container"
+        android:cacheColorHint="@color/white_dirty"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/videolist_progressfooter"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/madvertise_container"
+        android:background="@color/black_ghost"
+        android:clickable="false"
+        android:gravity="center"
+        android:visibility="invisible" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <include 
+        layout="@layout/progressview"
+        android:layout_above="@+id/madvertise_container"/>
+    
+    <LinearLayout
+        android:id="@+id/madvertise_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <!-- documentation : https://github.com/madvertise/madvertise-android-sdk -->
+
+        <de.madvertise.android.sdk.MadvertiseView
+            android:id="@+id/madad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            mad:bannerType="mma"
+            mad:placement_type="inline" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="red">#FF25A73D</color>
+    <color name="red_dirty">#FF1C932D</color>
+    <color name="white">#FF000000</color>
+    <color name="white_dirty">#FFF1F2F2</color>
+    <color name="gray">#FF9E9E9E</color>
+    <color name="gray_light">#FF303030</color>
+    <color name="gray_dirty">#FF7C8183</color>
+    <color name="black">#FFE6E7E8</color>
+    <color name="black_ghost">#88050404</color>
+    
+</resources>

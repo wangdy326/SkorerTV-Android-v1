@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/videoclip_controller_playbutton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="Toggle play/pause"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/videoclip_controller_progressview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/videoclip_controller_footer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/gray_dirty"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/videoclip_controller_timetextview"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:text="--:--" />
+
+        <SeekBar
+            android:id="@+id/videoclip_controller_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:secondaryProgress="0" />
+
+        <ImageView
+            android:id="@+id/videoclip_controller_fullscreenbutton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Toggle fullscreen"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            android:src="@drawable/full_screen" />
+    </LinearLayout>
+
+</LinearLayout>
